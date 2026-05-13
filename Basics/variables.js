@@ -16,3 +16,6 @@ if(true){
 console.log(a);
 console.log(b);
 console.log(c);
+
+z= 10
+console.log(z);
