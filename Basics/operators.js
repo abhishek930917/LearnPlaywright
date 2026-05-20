@@ -30,7 +30,7 @@ console.log("Division assignment (x /= 4):", x);
 x%=3; // x = x % 3
 console.log("Remainder assignment (x %= 3):", x);
 
-let x=10;
+//let x=10;
 x=+5; // Unary plus: converts to number
 console.log("Unary plus (+5):", x);
 x=-x; // Unary minus: negates the value
