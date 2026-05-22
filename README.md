@@ -68,6 +68,10 @@ LearnPlaywright/
 │   ├── null_undefined.js      # null vs undefined deep dive
 │   ├── string.js              # Strings, quotes, methods
 │   └── template_literal.js    # Template literals & parameterization
+├── Loops/
+│   ├── for_loop.js            # For loop with real-world examples
+│   ├── while_loop.js          # While loop with real-world examples
+│   └── do_while_loop.js       # Do...while loop with real-world examples
 ├── .vscode/
 │   └── tasks.json             # VS Code task configurations
 ├── .gitignore                 # Git ignore rules
@@ -88,21 +92,30 @@ LearnPlaywright/
 | `null_undefined.js` | `null` vs `undefined` | Differences, `typeof`, JSON behavior, `??` operator |
 | `string.js` | Strings | Single vs double quotes, backticks, immutability, methods |
 | `template_literal.js` | Template Literals | `${interpolation}`, multi-line, tagged templates, raw strings |
+| `for_loop.js` | For Loop | Definite iteration, counter control, nested loops |
+| `while_loop.js` | While Loop | Indefinite iteration, condition-checked before execution |
+| `do_while_loop.js` | Do...While Loop | Executes at least once, condition-checked after execution |
 
 ---
 
 ## How to Run Examples
 
-All files in the `Basics/` directory are self-contained Node.js scripts. Run them individually:
+All files in the `Basics/` and `Loops/` directories are self-contained Node.js scripts. Run them individually:
 
 ```bash
-# Run a specific file
+# Run Basics examples
 node Basics/HelloWorld.js
 node Basics/null_undefined.js
 node Basics/template_literal.js
 
-# Run all files in sequence (optional)
+# Run Loops examples
+node Loops/for_loop.js
+node Loops/while_loop.js
+node Loops/do_while_loop.js
+
+# Run all files in a folder in sequence (optional)
 for file in Basics/*.js; do echo "--- Running $file ---"; node "$file"; done
+for file in Loops/*.js; do echo "--- Running $file ---"; node "$file"; done
 ```
 
 > **Tip:** Open the file in your editor and read the inline comments alongside the output for the best learning experience.
