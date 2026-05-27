@@ -68,6 +68,30 @@ LearnPlaywright/
 │   ├── null_undefined.js      # null vs undefined deep dive
 │   ├── string.js              # Strings, quotes, methods
 │   └── template_literal.js    # Template literals & parameterization
+├── Arrays/
+│   ├── concat_array.js        # Array merging: concat(), spread, join()
+│   ├── accessing_elements.js  # Index access, bracket notation
+│   ├── add_remove_elements.js # push, pop, shift, unshift
+│   ├── array_destructuring.js # Destructuring assignment
+│   ├── array_length.js        # length property
+│   ├── checking_and_converting.js # isArray, from, of
+│   ├── creating_arrays.js     # Array literals, constructors
+│   ├── every_and_some.js      # every(), some()
+│   ├── finding_elements.js    # find, findIndex, includes
+│   ├── iterate.js             # Iteration methods
+│   ├── iterating_arrays.js    # for...of, entries, keys, values
+│   ├── modifying_elements.js  # fill, copyWithin
+│   ├── multidimensional_arrays.js # 2D arrays
+│   ├── search.js              # indexOf, lastIndexOf
+│   ├── slice_and_splice.js    # slice, splice
+│   ├── sorting_arrays.js      # sort, reverse
+│   ├── spread_rest_operators.js # ..., rest params
+│   └── transforming_arrays.js # map, filter, reduce
+├── Functions/
+│   ├── arrow_functions.js     # Arrow functions (ES6+)
+│   ├── function_declarations.js # Named functions, hoisting
+│   ├── function_expressions.js # Anonymous & named expressions
+│   └── iife_functions.js      # Immediately Invoked Function Expressions
 ├── Loops/
 │   ├── for_loop.js            # For loop with real-world examples
 │   ├── while_loop.js          # While loop with real-world examples
@@ -92,6 +116,19 @@ LearnPlaywright/
 | `null_undefined.js` | `null` vs `undefined` | Differences, `typeof`, JSON behavior, `??` operator |
 | `string.js` | Strings | Single vs double quotes, backticks, immutability, methods |
 | `template_literal.js` | Template Literals | `${interpolation}`, multi-line, tagged templates, raw strings |
+| `concat_array.js` | Array Concatenation | `concat()`, spread operator `[...a, ...b]`, `join()` |
+| `accessing_elements.js` | Accessing Elements | Index access, bracket notation, negative indexing |
+| `add_remove_elements.js` | Adding/Removing | `push`, `pop`, `shift`, `unshift`, `splice` |
+| `array_destructuring.js` | Destructuring | Extract values with pattern matching |
+| `finding_elements.js` | Finding Elements | `find`, `findIndex`, `includes`, `indexOf` |
+| `iterating_arrays.js` | Iteration | `for...of`, `entries()`, `keys()`, `values()` |
+| `slice_and_splice.js` | Slice & Splice | Non-mutating vs mutating array methods |
+| `sorting_arrays.js` | Sorting | `sort()`, `reverse()`, custom comparators |
+| `transforming_arrays.js` | Transformation | `map`, `filter`, `reduce`, `flatMap` |
+| `arrow_functions.js` | Arrow Functions | Concise syntax, lexical `this`, implicit return |
+| `function_declarations.js` | Function Declarations | Named functions, hoisting, `this` binding |
+| `function_expressions.js` | Function Expressions | Anonymous, named, callbacks, closures |
+| `iife_functions.js` | IIFE | Immediately invoked, private scope, module pattern |
 | `for_loop.js` | For Loop | Definite iteration, counter control, nested loops |
 | `while_loop.js` | While Loop | Indefinite iteration, condition-checked before execution |
 | `do_while_loop.js` | Do...While Loop | Executes at least once, condition-checked after execution |
@@ -108,6 +145,17 @@ node Basics/HelloWorld.js
 node Basics/null_undefined.js
 node Basics/template_literal.js
 
+# Run Arrays examples
+node Arrays/concat_array.js
+node Arrays/slice_and_splice.js
+node Arrays/transforming_arrays.js
+
+# Run Functions examples
+node Functions/arrow_functions.js
+node Functions/function_declarations.js
+node Functions/function_expressions.js
+node Functions/iife_functions.js
+
 # Run Loops examples
 node Loops/for_loop.js
 node Loops/while_loop.js
@@ -115,6 +163,8 @@ node Loops/do_while_loop.js
 
 # Run all files in a folder in sequence (optional)
 for file in Basics/*.js; do echo "--- Running $file ---"; node "$file"; done
+for file in Arrays/*.js; do echo "--- Running $file ---"; node "$file"; done
+for file in Functions/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Loops/*.js; do echo "--- Running $file ---"; node "$file"; done
 ```
 
