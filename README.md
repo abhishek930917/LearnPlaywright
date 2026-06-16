@@ -96,6 +96,20 @@ LearnPlaywright/
 │   ├── for_loop.js            # For loop with real-world examples
 │   ├── while_loop.js          # While loop with real-world examples
 │   └── do_while_loop.js       # Do...while loop with real-world examples
+├── Callback/
+│   ├── callback.js            # Sync callbacks, array methods
+│   ├── async_vs_sync.js       # Sync vs async execution order
+│   ├── higher_order.js        # Higher-order functions & closures
+│   ├── callback_hell.js       # Pyramid of doom & solutions
+│   └── error_first.js         # Node.js error-first pattern
+├── Promise/
+│   ├── introduction.js        # Promise states, creation
+│   ├── chaining.js            # .then(), .catch(), .finally()
+│   ├── static_methods.js      # Promise.all, race, any, allSettled
+│   ├── async_await.js         # Async/await syntax
+│   ├── error_handling.js      # Error handling patterns
+│   ├── promisification.js     # Callback -> Promise conversion
+│   └── microtasks.js          # Event loop, microtask queue
 ├── .vscode/
 │   └── tasks.json             # VS Code task configurations
 ├── .gitignore                 # Git ignore rules
@@ -132,6 +146,18 @@ LearnPlaywright/
 | `for_loop.js` | For Loop | Definite iteration, counter control, nested loops |
 | `while_loop.js` | While Loop | Indefinite iteration, condition-checked before execution |
 | `do_while_loop.js` | Do...While Loop | Executes at least once, condition-checked after execution |
+| `callback.js` | Synchronous Callbacks | Passing functions as arguments, array methods |
+| `async_vs_sync.js` | Sync vs Async | Blocking vs non-blocking, event loop basics |
+| `higher_order.js` | Higher-Order Functions | Functions as args/return values, composition |
+| `callback_hell.js` | Callback Hell | Nested callbacks, named functions as solution |
+| `error_first.js` | Error-First Pattern | Node.js `callback(err, result)` convention |
+| `introduction.js` | Promise Basics | Pending/fulfilled/rejected, executor function |
+| `chaining.js` | Promise Chaining | `.then()` → `.then()` → `.catch()`, transforming values |
+| `static_methods.js` | Promise Static Methods | `all`, `allSettled`, `race`, `any`, `resolve`, `reject` |
+| `async_await.js` | Async/Await | `async` functions, `await`, try/catch, parallel |
+| `error_handling.js` | Promise Error Handling | `.catch()` recovery, unhandled rejections |
+| `promisification.js` | Promisification | Callback → Promise, `util.promisify` |
+| `microtasks.js` | Microtasks & Event Loop | Microtask vs macrotask queue, execution order |
 
 ---
 
@@ -161,11 +187,29 @@ node Loops/for_loop.js
 node Loops/while_loop.js
 node Loops/do_while_loop.js
 
+# Run Callback examples
+node Callback/callback.js
+node Callback/async_vs_sync.js
+node Callback/callback_hell.js
+node Callback/error_first.js
+node Callback/higher_order.js
+
+# Run Promise examples
+node Promise/introduction.js
+node Promise/chaining.js
+node Promise/static_methods.js
+node Promise/async_await.js
+node Promise/error_handling.js
+node Promise/promisification.js
+node Promise/microtasks.js
+
 # Run all files in a folder in sequence (optional)
 for file in Basics/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Arrays/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Functions/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Loops/*.js; do echo "--- Running $file ---"; node "$file"; done
+for file in Callback/*.js; do echo "--- Running $file ---"; node "$file"; done
+for file in Promise/*.js; do echo "--- Running $file ---"; node "$file"; done
 ```
 
 > **Tip:** Open the file in your editor and read the inline comments alongside the output for the best learning experience.
