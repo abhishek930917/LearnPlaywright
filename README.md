@@ -18,7 +18,7 @@ A hands-on learning repository for JavaScript fundamentals, modern ES6+ features
 
 ## About
 
-This repository documents the journey of learning JavaScript from the ground up, progressing toward Playwright automation testing. Each file in the `Basics/` folder is a standalone, runnable example with explanations and comments.
+This repository documents the journey of learning JavaScript from the ground up, progressing toward Playwright automation testing. Each file is a standalone, runnable example with explanations and comments.
 
 Whether you're reviewing core concepts or learning alongside, the code is written to be read, executed, and experimented with.
 
@@ -110,6 +110,13 @@ LearnPlaywright/
 │   ├── error_handling.js      # Error handling patterns
 │   ├── promisification.js     # Callback -> Promise conversion
 │   └── microtasks.js          # Event loop, microtask queue
+├── Async_Await/
+│   ├── introduction.js        # async/await basics, syntax, sequential
+│   ├── error_handling.js      # try/catch, re-throw, .catch() vs await
+│   ├── sequential_vs_parallel.js # Sequential vs parallel execution patterns
+│   ├── real_world_patterns.js # Retry, timeout, debounce, memoization
+│   ├── async_iteration.js   # for await...of, async generators, async map/filter/reduce
+│   └── advanced_patterns.js # IIAFE, factory pattern, locks, AbortController
 ├── .vscode/
 │   └── tasks.json             # VS Code task configurations
 ├── .gitignore                 # Git ignore rules
@@ -158,6 +165,12 @@ LearnPlaywright/
 | `error_handling.js` | Promise Error Handling | `.catch()` recovery, unhandled rejections |
 | `promisification.js` | Promisification | Callback → Promise, `util.promisify` |
 | `microtasks.js` | Microtasks & Event Loop | Microtask vs macrotask queue, execution order |
+| `introduction.js` | Async/Await Basics | `async` functions, `await`, automatic Promise wrapping |
+| `error_handling.js` | Async Error Handling | `try/catch`, re-throwing, missing `await` pitfalls |
+| `sequential_vs_parallel.js` | Sequential vs Parallel | `Promise.all`, `allSettled`, concurrency limits |
+| `real_world_patterns.js` | Async Patterns | Retry, timeout, debounce, memoization, waterfall |
+| `async_iteration.js` | Async Iteration | `for await...of`, async generators, async map/filter/reduce |
+| `advanced_patterns.js` | Advanced Async | IIAFE, factory pattern, locks, AbortController, async events |
 
 ---
 
@@ -203,6 +216,14 @@ node Promise/error_handling.js
 node Promise/promisification.js
 node Promise/microtasks.js
 
+# Run Async/Await examples
+node Async_Await/introduction.js
+node Async_Await/error_handling.js
+node Async_Await/sequential_vs_parallel.js
+node Async_Await/real_world_patterns.js
+node Async_Await/async_iteration.js
+node Async_Await/advanced_patterns.js
+
 # Run all files in a folder in sequence (optional)
 for file in Basics/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Arrays/*.js; do echo "--- Running $file ---"; node "$file"; done
@@ -210,6 +231,7 @@ for file in Functions/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Loops/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Callback/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Promise/*.js; do echo "--- Running $file ---"; node "$file"; done
+for file in Async_Await/*.js; do echo "--- Running $file ---"; node "$file"; done
 ```
 
 > **Tip:** Open the file in your editor and read the inline comments alongside the output for the best learning experience.
