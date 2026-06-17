@@ -1,6 +1,6 @@
 # LearnPlaywright
 
-A hands-on learning repository for JavaScript fundamentals, modern ES6+ features, and Playwright automation testing. This project is designed to build strong foundational knowledge before diving into browser automation.
+A hands-on learning repository for JavaScript fundamentals, modern ES6+ features, and Playwright automation testing. This project covers foundational JavaScript concepts and includes a dedicated Playwright test suite for hands-on browser automation.
 
 ---
 
@@ -18,7 +18,7 @@ A hands-on learning repository for JavaScript fundamentals, modern ES6+ features
 
 ## About
 
-This repository documents the journey of learning JavaScript from the ground up, progressing toward Playwright automation testing. Each file is a standalone, runnable example with explanations and comments.
+This repository documents the journey of learning JavaScript from the ground up, progressing into Playwright automation testing. Each file in the JavaScript sections is a standalone, runnable example with explanations and comments. The `Playwright_Basics/` folder contains a working Playwright test project.
 
 Whether you're reviewing core concepts or learning alongside, the code is written to be read, executed, and experimented with.
 
@@ -117,11 +117,55 @@ LearnPlaywright/
 │   ├── real_world_patterns.js # Retry, timeout, debounce, memoization
 │   ├── async_iteration.js   # for await...of, async generators, async map/filter/reduce
 │   └── advanced_patterns.js # IIAFE, factory pattern, locks, AbortController
+├── Playwright_Basics/
+│   ├── tests/
+│   │   └── example.spec.ts    # Sample Playwright tests
+│   ├── playwright.config.ts   # Playwright configuration
+│   ├── package.json           # Playwright dependencies
+│   └── package-lock.json
 ├── .vscode/
 │   └── tasks.json             # VS Code task configurations
 ├── .gitignore                 # Git ignore rules
 └── README.md                  # This file
 ```
+
+---
+
+## Playwright Setup
+
+The `Playwright_Basics/` directory contains a standalone Playwright project. To get it running:
+
+1. **Navigate to the Playwright project**
+
+   ```bash
+   cd Playwright_Basics
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Install Playwright browsers**
+
+   ```bash
+   npx playwright install
+   ```
+
+4. **Run the tests**
+
+   ```bash
+   npx playwright test
+   ```
+
+5. **Show the HTML report**
+
+   ```bash
+   npx playwright show-report
+   ```
+
+> **Note:** Since Playwright is installed locally in `Playwright_Basics`, always use `npx playwright` or run commands from within that directory.
 
 ---
 
@@ -171,10 +215,13 @@ LearnPlaywright/
 | `real_world_patterns.js` | Async Patterns | Retry, timeout, debounce, memoization, waterfall |
 | `async_iteration.js` | Async Iteration | `for await...of`, async generators, async map/filter/reduce |
 | `advanced_patterns.js` | Advanced Async | IIAFE, factory pattern, locks, AbortController, async events |
+| `example.spec.ts` | Playwright Testing | Page navigation, element interaction, assertions |
 
 ---
 
 ## How to Run Examples
+
+### JavaScript Examples
 
 All files in the `Basics/` and `Loops/` directories are self-contained Node.js scripts. Run them individually:
 
@@ -232,6 +279,27 @@ for file in Loops/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Callback/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Promise/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Async_Await/*.js; do echo "--- Running $file ---"; node "$file"; done
+```
+
+### Playwright Examples
+
+From the `Playwright_Basics/` directory:
+
+```bash
+# Run all Playwright tests
+npx playwright test
+
+# Run tests in headed mode (visible browser)
+npx playwright test --headed
+
+# Run tests in a specific browser
+npx playwright test --project=chromium
+
+# Run tests with the UI mode
+npx playwright test --ui
+
+# Show the HTML report
+npx playwright show-report
 ```
 
 > **Tip:** Open the file in your editor and read the inline comments alongside the output for the best learning experience.
