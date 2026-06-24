@@ -117,6 +117,24 @@ LearnPlaywright/
 │   ├── real_world_patterns.js # Retry, timeout, debounce, memoization
 │   ├── async_iteration.js   # for await...of, async generators, async map/filter/reduce
 │   └── advanced_patterns.js # IIAFE, factory pattern, locks, AbortController
+├── Objects/
+│   └── (Object-oriented programming basics)
+├── OOPS/
+│   ├── Encapsulation/
+│   │   ├── encapsulation_concepts.js
+│   │   ├── public_private_example.js
+│   │   ├── getter_setter_example.js
+│   │   └── method_chaining_example.js
+│   ├── Inheritance/
+│   │   ├── single_inheritance.js
+│   │   ├── multilevel_inheritance.js
+│   │   ├── hierarchical_inheritance.js
+│   │   └── other_inheritance.js
+│   └── polymorphism/
+│       ├── method_overriding.js
+│       ├── duck_typing.js
+│       ├── function_overloading.js
+│       └── practical_example.js
 ├── Playwright_Basics/
 │   ├── tests/
 │   │   └── example.spec.ts    # Sample Playwright tests
@@ -215,6 +233,18 @@ The `Playwright_Basics/` directory contains a standalone Playwright project. To 
 | `real_world_patterns.js` | Async Patterns | Retry, timeout, debounce, memoization, waterfall |
 | `async_iteration.js` | Async Iteration | `for await...of`, async generators, async map/filter/reduce |
 | `advanced_patterns.js` | Advanced Async | IIAFE, factory pattern, locks, AbortController, async events |
+| `encapsulation_concepts.js` | Encapsulation | Data hiding, public/private fields, getters/setters |
+| `public_private_example.js` | Access Modifiers | Public, private (#), protected (_) variables in JS |
+| `getter_setter_example.js` | Getters & Setters | `get`/`set` keywords, validation, computed properties |
+| `method_chaining_example.js` | Method Chaining | `return this`, fluent APIs, builder pattern |
+| `single_inheritance.js` | Single Inheritance | One child extends one parent, `super()`, overriding |
+| `multilevel_inheritance.js` | Multi-Level Inheritance | Constructor chaining, prototype chain, `instanceof` |
+| `hierarchical_inheritance.js` | Hierarchical Inheritance | Multiple children from one parent, polymorphic arrays |
+| `other_inheritance.js` | Advanced Inheritance | Mixins, prototypal inheritance, composition vs inheritance |
+| `method_overriding.js` | Runtime Polymorphism | Method overriding, `super`, Liskov Substitution Principle |
+| `duck_typing.js` | Duck Typing | Structural polymorphism, behavior-based typing, iterables |
+| `function_overloading.js` | Function Overloading | Default params, rest args, type checking, config objects |
+| `practical_example.js` | Polymorphism in Practice | Payment system combining all polymorphism concepts |
 | `example.spec.ts` | Playwright Testing | Page navigation, element interaction, assertions |
 
 ---
@@ -271,6 +301,24 @@ node Async_Await/real_world_patterns.js
 node Async_Await/async_iteration.js
 node Async_Await/advanced_patterns.js
 
+# Run OOPS - Encapsulation examples
+node OOPS/Encapsulation/encapsulation_concepts.js
+node OOPS/Encapsulation/public_private_example.js
+node OOPS/Encapsulation/getter_setter_example.js
+node OOPS/Encapsulation/method_chaining_example.js
+
+# Run OOPS - Inheritance examples
+node OOPS/Inheritance/single_inheritance.js
+node OOPS/Inheritance/multilevel_inheritance.js
+node OOPS/Inheritance/hierarchical_inheritance.js
+node OOPS/Inheritance/other_inheritance.js
+
+# Run OOPS - Polymorphism examples
+node OOPS/polymorphism/method_overriding.js
+node OOPS/polymorphism/duck_typing.js
+node OOPS/polymorphism/function_overloading.js
+node OOPS/polymorphism/practical_example.js
+
 # Run all files in a folder in sequence (optional)
 for file in Basics/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Arrays/*.js; do echo "--- Running $file ---"; node "$file"; done
@@ -279,6 +327,9 @@ for file in Loops/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Callback/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Promise/*.js; do echo "--- Running $file ---"; node "$file"; done
 for file in Async_Await/*.js; do echo "--- Running $file ---"; node "$file"; done
+for file in OOPS/Encapsulation/*.js; do echo "--- Running $file ---"; node "$file"; done
+for file in OOPS/Inheritance/*.js; do echo "--- Running $file ---"; node "$file"; done
+for file in OOPS/polymorphism/*.js; do echo "--- Running $file ---"; node "$file"; done
 ```
 
 ### Playwright Examples
